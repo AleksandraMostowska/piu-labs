@@ -64,8 +64,6 @@ h1 {
 
 body:has(input[value='blue']:checked) .container .item {
   background-color: blue;
-  /* flex: 1 1 calc(33.33% - 1rem);
-  box-sizing: border-box; */
 }
 
 body:has(input[value='red']:checked) .container .item {
