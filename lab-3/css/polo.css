@@ -1,0 +1,219 @@
+:root {
+  --color-primary: blue;
+  --size-bg: #ffffff;
+  --product-image: url('../images/polo_b.png');
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  width: 90%;
+  background-color: rgb(224, 224, 224);
+  padding: 2% 2%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.product-image {
+  flex: 1 1 min(500px, 60%);
+  min-width: 300px;
+  max-width: 500px;
+  aspect-ratio: 1 / 1;
+  background-image: var(--product-image);
+  background-size: cover;
+  background-position: center;
+  border: 2px solid var(--color-primary);
+  border-radius: 10px;
+  background-color: white;
+}
+
+.product-details {
+  flex: 1 1 300px;
+  min-width: 300px;
+  max-width: 300px;
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: space-between;
+
+  h2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.promo-label {
+  background-color: var(--color-primary);
+  padding: 0.5rem;
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+}
+
+.color-picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0 1rem 0;
+  input {
+    display: none;
+  }
+}
+
+.color-label {
+  align-self: flex-start;
+  font-weight: bold;
+  margin-left: calc(50% - ((24px + 0.5rem) * (3 / 2) + 30px));
+}
+
+.color-dots {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.color-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
+.size-picker {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  & > strong {
+    align-self: flex-start;
+    margin-left: calc(50% - ((30px + 1rem) * 2.5));
+  }
+}
+
+.sizes {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.size-box {
+  cursor: pointer;
+  border: 2px solid #000;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+input[name='size']:checked + label {
+  background: var(--color-primary);
+  color: white;
+  border-color: black;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.cart-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.add-to-cart {
+  padding: 1rem 2rem;
+  background-color: var(--color-primary);
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  width: auto;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+#color-blue:checked ~ .product-image {
+  --product-image: url('../images/polo_b.png');
+}
+#color-red:checked ~ .product-image {
+  --product-image: url('../images/polo_r.png');
+}
+#color-green:checked ~ .product-image {
+  --product-image: url('../images/polo_g.png');
+}
+#color-yellow:checked ~ .product-image {
+  --product-image: url('../images/polo_y.png');
+}
+
+#color-blue:checked ~ .product-image,
+#color-blue:checked ~ .product-details {
+  --color-primary: blue;
+}
+
+#color-red:checked ~ .product-image,
+#color-red:checked ~ .product-details {
+  --color-primary: red;
+}
+
+#color-green:checked ~ .product-image,
+#color-green:checked ~ .product-details {
+  --color-primary: green;
+}
+
+#color-yellow:checked ~ .product-image,
+#color-yellow:checked ~ .product-details {
+  --color-primary: rgb(255, 213, 0);
+}
+
+#color-blue:checked
+  ~ .product-image
+  ~ .product-details
+  .color-picker
+  label[for='color-blue'],
+#color-red:checked
+  ~ .product-image
+  ~ .product-details
+  .color-picker
+  label[for='color-red'],
+#color-green:checked
+  ~ .product-image
+  ~ .product-details
+  .color-picker
+  label[for='color-green'],
+#color-yellow:checked
+  ~ .product-image
+  ~ .product-details
+  .color-picker
+  label[for='color-yellow'] {
+  border: 3px solid white;
+  box-shadow: 0 0 0 1px black;
+}
