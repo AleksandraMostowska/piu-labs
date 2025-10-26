@@ -39,6 +39,13 @@ body {
   border: 2px solid var(--color-primary);
   border-radius: 10px;
   background-color: white;
+  transition: transform 0.5s linear, filter 0.3s ease;
+
+  &:hover {
+    transform: rotate(360deg);
+    background-image: url('../images/explosion.gif');
+    filter: brightness(1.1);
+  }
 }
 
 .product-details {
@@ -64,6 +71,12 @@ body {
   border-radius: 6px;
   color: white;
   font-size: 1rem;
+
+  transition: transform 0.5s linear, filter 0.3s ease;
+
+  &:hover {
+    transform: rotate(720deg);
+  }
 }
 
 .color-picker {
@@ -95,6 +108,11 @@ body {
   border-radius: 50%;
   border: 2px solid #000;
   cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px 2px var(--color-primary);
+  }
 }
 
 .size-picker {
@@ -126,6 +144,12 @@ body {
   font-size: 1rem;
   margin-top: 1rem;
   margin-right: 1rem;
+
+  &:hover {
+    transform: scale(1.2);
+    color: var(--color-primary);
+    box-shadow: 0 0 5px 2px var(--color-primary);
+  }
 }
 
 input[name='size']:checked + label {
@@ -159,6 +183,15 @@ input[name='size']:checked + label {
   width: auto;
   font-size: 1.2rem;
   text-align: center;
+  transition: transform 0.2s ease, background-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    background-color: white;
+    color: var(--color-primary);
+    box-shadow: 0 4px 10px var(--color-primary);
+  }
 }
 
 #color-blue:checked ~ .product-image {
