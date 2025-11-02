@@ -3,10 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <title>Lab 4</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <h1>Lab 4</h1>
     <a href="..">Powrót</a>
+    <h2 class="kanban">Kanban</h2>
+
+    <div id="board">
+      <div class="col" status="todo">
+        <h2>Do zrobienia: <span class="count">0</span>&#x1F918;</h2>
+        <div class="cards"></div>
+        <button class="add">Dodaj kartę</button>
+        <button class="color">Koloruj kolumnę</button>
+        <button class="sort">Sortuj</button>
+      </div>
+      <div class="col" status="in progress">
+        <h2>W trakcie: <span class="count">0</span>&#x1F4AA;</h2>
+        <div class="cards"></div>
+        <button class="add">Dodaj kartę</button>
+        <button class="color">Koloruj kolumnę</button>
+        <button class="sort">Sortuj</button>
+      </div>
+      <div class="col" status="done">
+        <h2>Zrobione: <span class="count">0</span>&#x1F973;</h2>
+        <div class="cards"></div>
+        <button class="add">Dodaj kartę</button>
+        <button class="color">Koloruj kolumnę</button>
+        <button class="sort">Sortuj</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

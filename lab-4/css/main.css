@@ -1,0 +1,135 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #afc8fd, #e5b5ff);
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  background: rgb(255, 231, 253);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
+  color: #5549af;
+  font-family: 'Chalkduster', fantasy;
+}
+
+.kanban {
+  font-size: 4rem;
+  text-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 0.01rem white;
+  font-weight: bold;
+}
+
+#board {
+  display: flex;
+  justify-content: space-around;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.col {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 0.8rem;
+  width: 30%;
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
+}
+
+.cards {
+  min-height: 120px;
+  margin-bottom: 1rem;
+}
+
+.card {
+  background: #ddd;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.2rem solid #5549af;
+
+  .remove {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.7rem;
+    color: white;
+    background: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+
+  .text {
+    width: 90%;
+    text-align: left;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    color: #5549af;
+    font-weight: bold;
+    align-self: flex-start;
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    .right,
+    .left {
+      background: none;
+      font-size: 1.5rem;
+      color: #5549af;
+      font-weight: bold;
+
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+  }
+
+  .recolor {
+    position: absolute;
+    right: 0;
+    background: none;
+    font-size: 1.5rem;
+    margin-top: 3.2rem;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+}
+
+button {
+  border-radius: 0.2rem;
+  border: none;
+  cursor: pointer;
+  background: white;
+  color: #afc8fd;
+  font-weight: bold;
+  transition: 0.2s;
+
+  &:hover {
+    background: rgb(0, 0, 0);
+    color: white;
+  }
+}
