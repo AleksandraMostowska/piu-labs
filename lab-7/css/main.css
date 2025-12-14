@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f6f6f6;
+  background: linear-gradient(to bottom right, #ffffff, #8782ca);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  padding: 3rem;
+  text-align: center;
+  min-height: 100vh;
+}
+
+h2 {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 0.01rem white;
+  font-family: monospace;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+  color: 8782ca;
+  text-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 0.01rem white;
+  font-family: monospace;
+  margin-bottom: 2rem;
+}
+
+.product-grid {
+  align-items: stretch;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.product-card {
+  width: 100%;
+  height: 100%;
+  background: white;
+  border: 1px solid white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  img {
+    width: 100%;
+    border-radius: 1rem;
+  }
+}
+
+.colors,
+.sizes {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+.promo {
+  background: #8782ca;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.add-btn {
+  padding: 10px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.cart-message {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+}
+
+.size-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 5px;
+  justify-content: center;
+}
+
+.size-btn {
+  padding: 6px 10px;
+  border: 1px solid #555;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 13px;
+
+  &:hover {
+    background: #eee;
+  }
+}
+
+.size-btn.active {
+  background: black;
+  color: white;
+}
+
+.size-btn.disabled {
+  background: #ccc;
+  color: #777;
+  cursor: not-allowed;
+}
